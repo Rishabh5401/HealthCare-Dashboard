@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo"><img src="assets/TestLogo.svg" alt=""></div>
+    <nav class="nav-center">
+      <button>Overview</button>
+      <button>Patients</button>
+      <button>Schedule</button>
+      <button>Messages</button>
+      <button>Transactions</button>
+    </nav>
+    <div class="header-right">
+        <img src="assets/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png" alt="" id="doc-header">
+      <span class="doctor-info"> Dr. John Smith</span>
+      <button class="icon"><img src="assets/settings_FILL0_wght300_GRAD0_opsz24.svg" alt=""></button>
+      <button class="icon"><img src="assets/more_vert_FILL0_wght300_GRAD0_opsz24.svg" alt=""></button>
+    </div>
+  </header>
+
+  <!-- BODY LAYOUT -->
+  <div class="main-layout">
+
+    
+    <!-- LEFT: Patient List -->
+<aside class="patient-list">
+  <h2>Patients</h2>
+  <input type="text" placeholder="Search patient..."/>
+  <ul>
+    <li>
+      <img src="assets/Layer 8.png" alt="Patient"/>
+      <div>
+        <strong>Emily Williams</strong>
+        <p>18 • Female</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+    <li>
+      <img src="assets/Layer 1.png" alt="Patient"/>
+      <div>
+        <strong>Ryan Johnson</strong>
+        <p>45 • Male</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+    <li>
+      <img src="assets/Layer 3.png" alt="Patient"/>
+      <div>
+        <strong>Brandon Mitchel</strong>
+        <p>29 • Male</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+    <li>
+      <img src="assets/Layer 5.png" alt="Patient"/>
+      <div>
+        <strong>John Doe</strong>
+        <p>45 • Male</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+    <li>
+      <img src="assets/Layer 2-1.png" alt="Patient"/>
+      <div>
+        <strong>Jessica Taylor</strong>
+        <p>29 • Female</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+    <li>
+      <img src="assets/Layer 6.png" alt="Patient"/>
+      <div>
+        <strong>Tyler</strong>
+        <p>45 • Male</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+    <li>
+      <img src="assets/Layer 12.png" alt="Patient"/>
+      <div>
+        <strong>Ashley</strong>
+        <p>29 • Female</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+    <li>
+      <img src="assets/Layer 10.png" alt="Patient"/>
+      <div>
+        <strong>Kevin</strong>
+        <p>45 • Male</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+    <li>
+      <img src="assets/Layer 9.png" alt="Patient"/>
+      <div>
+        <strong>Olivia</strong>
+        <p>29 • Female</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+    <li>
+      <img src="assets/Layer 4.png" alt="Patient"/>
+      <div>
+        <strong>Samantha</strong>
+        <p>45 • Female</p>
+      </div>
+      <button class="dots"><img src="assets/more_horiz_FILL0_wght300_GRAD0_opsz24.svg" alt="menu"></button>
+    </li>
+  </ul>
+</aside>
+
+
+    
+<!-- Center Section: Diagnose -->
+<section class="diagnose-section">
+ <!-- Blood Pressure Card -->
+<div class="card blood-pressure">
+  <div class="card-header">
+    <h3>Blood Pressure</h3>
+    <img src="assets/more.png" alt="menu" class="menu-icon" />
+  </div>
+  <div class="card-body">
+    <canvas id="bpChart"></canvas>
+  </div>
+</div>
+
+<!-- Other Vitals in horizontal row -->
+<div class="vital-cards">
+  <div class="card respiratory">
+    <div class="vital-icon">
+      <img src="assets/respiratory rate.svg" alt="Respiratory Rate" />
+    </div>
+    <div class="vital-info">
+      <h4>Respiratory Rate</h4>
+      <p>20 bpm</p>
+    </div>
+  </div>
+
+  <div class="card temperature">
+    <div class="vital-icon">
+      <img src="assets/temperature.svg" alt="Temperature" />
+    </div>
+    <div class="vital-info">
+      <h4>Temperature</h4>
+      <p>98.6 °F</p>
+    </div>
+  </div>
+
+  <div class="card heart-rate">
+    <div class="vital-icon">
+      <img src="assets/HeartBPM.svg" alt="Heart Rate" />
+    </div>
+    <div class="vital-info">
+      <h4>Heart Rate</h4>
+      <p>75 bpm</p>
+    </div>
+  </div>
+</div>
+
+  <!-- Diagnostic List -->
+  <div class="diagnostic-card">
+  <h2>Diagnostic List</h2>
+  <ul class="diagnostic-list">
+    <li>
+      <span>Blood Test</span>
+      <span class="status pending">Pending</span>
+    </li>
+    <li>
+      <span>X-Ray</span>
+      <span class="status completed">Completed</span>
+    </li>
+    <li>
+      <span>ECG</span>
+      <span class="status pending">Pending</span>
+    </li>
+    <li>
+      <span>MRI Scan</span>
+      <span class="status completed">Completed</span>
+    </li>
+  </ul>
+</div>
+</section>
+
+    <!-- RIGHT: Patient Details + Reports -->
+    <aside class="patient-details">
+  <div class="card patient-info">
+    <img id="patient-photo" src="" alt="Patient Photo"/>
+    <h3 id="patient-name"></h3>
+    <p>Date of Birth: <span id="patient-dob"></span></p>
+    <p>Gender: <span id="patient-gender"></span></p>
+    <p>Contact: <span id="patient-phone"></span></p>
+    <p>Emergency: <span id="patient-emergency"></span></p>
+    <p>Insurance: <span id="patient-insurance"></span></p>
+    <button>Show All Information</button>
+  </div>
+
+  <div class="card lab-reports">
+    <h2>Lab Reports</h2>
+    <ul id="lab-reports-list">
+      <!-- JS will fill this -->
+    </ul>
+  </div>
+</aside>
+
+
+  <script src="script.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+<!-- <script>
+  // Blood Pressure Chart
+  const ctx = document.getElementById('bpChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+      datasets: [{
+        label: 'Systolic',
+        data: [118, 120, 122, 121, 119],
+        borderColor: '#FF6B6B',
+        borderWidth: 2,
+        fill: false,
+        tension: 0.4
+      }, {
+        label: 'Diastolic',
+        data: [78, 80, 82, 79, 77],
+        borderColor: '#4D96FF',
+        borderWidth: 2,
+        fill: false,
+        tension: 0.4
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom' }
+      },
+      scales: {
+        y: { beginAtZero: false }
+      }
+    }
+  });
+  window.onload = async () => {
+    const jessica = await fetchPatientData();
+
+    // Example: show her name in a div
+    document.getElementById("patient-name").innerText = jessica.name;
+  };
+</script> -->
+</body>
+</html>
